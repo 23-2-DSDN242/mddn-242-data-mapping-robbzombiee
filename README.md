@@ -5,9 +5,10 @@
 The images above are photos of Wellington CBD algorithmically processed with a lightly modified version of the [p5.js Pointillism example](https://p5js.org/examples/image-pointillism.html). The masks for each photo highlight various objects. Replace this text with your own which explains the source of your photos, masking, and applied algorithm.
 
 PROCESS:
-for this project, i wanted for the AI to identify where the sky was and my filter was at first only rain, then i also added stars ontop of the rain, so it makes a nice rain, starry sky effect. my favourite days are rainy days, especially rainy nights so i wanted to have a theme of an AI that turns everyday into a rainy day. i also have a little effect on the landscape which are little blocks, that use the fill(pix), this is to show a glitch in the world, that the world maybe is not real. 
+
+AI filter idea: rainy and starry sky.
+
+for this project, i wanted for the AI to identify where the sky was and my filter was at first only rain, then i also added stars ontop of the rain (i couldve coded the stars, but i just added in an image lol), so it makes a nice rain, starry sky effect. my favourite days are rainy days, especially rainy nights so i wanted to have a theme of an AI that turns everyday into a rainy day. i also have a little effect on the landscape which are little blocks, that use the fill(pix), these 'glitch recatangles' are meant show a glitch in the world, that the world maybe is artificial because its raining all the time. I also added different rain color options, these include white,black and blue. on some skies which arent so bright, i think white works the best, and on brigther skies, blue or black look nicer, although the white rain is always the best.
 
 AI Camera Process:
 I followed the instructions on nuku, and uploaded the files to the OneDrive, where it was done manually, the AI identified the sky pretty well, the masks look alittle lower quality but it is still fine. now im curious if they could identify little objects. I had no problems with the AI portion, it did great.
-
-I also added different rain color options, these include white,black and blue. on some skies which arent so bright, i think white works the best, and on brigther skies, blue or black look nicer, although the white rain is always the best.
