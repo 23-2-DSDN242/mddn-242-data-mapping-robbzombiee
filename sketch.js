@@ -1,17 +1,20 @@
 let sourceImg=null;
 let maskImg=null;
 let renderCounter=0;
-let star;
+let star; // star varaible
 
+let white = '#FFFFFF'
+let black = '#000000'
+let blue = '#050854'
 // change these three lines as appropiate
-let sourceFile = "input_3.jpg";
-let maskFile   = "mask_3.png";
-let outputFile = "output_3.png";
+let sourceFile = "input_4.jpg";
+let maskFile   = "mask_4.png";
+let outputFile = "output_4.png";
 
 function preload() {
   sourceImg = loadImage(sourceFile);
   maskImg = loadImage(maskFile);
-  star = loadImage('sun.png');
+  star = loadImage('sun.png'); //load star
 }
 
 function setup () {
@@ -33,18 +36,17 @@ function draw () {
     let y = floor(random(sourceImg.height));
     let pix = sourceImg.get(x, y);
     let mask = maskImg.get(x, y);
-    fill(pix);
     if(mask[0] > 128) {
-      //let pointSize = 0;
       image(star,x-5,y,0); // comment this to turn off stars
-      stroke(255,255,255); // rain line color.
-      strokeWeight(.5);
+      stroke(white); // rain color. options are white, black and blue
+      strokeWeight(.5); // size of rain lines
       line(x, y, x , y + 100); // rain lines.
     }
     else {
-      noStroke();
-      let pointSize = 11;
-      rect(x, y, pointSize, pointSize);
+      fill(pix); // make glitch rects pix color
+      noStroke(); // remoke stroke from cubes
+      let pointSize = 11; // size of glitch rects
+      rect(x, y, pointSize, pointSize); // create glitch rects
 
     }
   }
