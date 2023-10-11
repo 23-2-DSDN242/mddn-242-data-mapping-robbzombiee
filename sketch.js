@@ -3,9 +3,9 @@ let maskImg=null;
 let renderCounter=0;
 let star; // star varaible
 
-let white = '#FFFFFF'
-let black = '#000000'
-let blue = '#050854'
+let white = '#FFFFFF' // white color into variable
+let black = '#000000' // black color into variable
+let blue = '#050854' // blue color into variable
 // change these three lines as appropiate
 let sourceFile = "input_4.jpg";
 let maskFile   = "mask_4.png";
@@ -37,21 +37,21 @@ function draw () {
     let pix = sourceImg.get(x, y);
     let mask = maskImg.get(x, y);
     if(mask[0] > 128) {
-      image(star,x-5,y,0); // comment this to turn off stars
+      image(star,x-5,y,0); // comment this to turn off stars.
       stroke(white); // rain color. options are white, black and blue
-      strokeWeight(.5); // size of rain lines
+      strokeWeight(.5); // size of rain lines.
       line(x, y, x , y + 100); // rain lines.
     }
     else {
-      fill(pix); // make glitch rects pix color
+      fill(pix); // make glitch rectangles the pixel color
       noStroke(); // remoke stroke from cubes
       let pointSize = 11; // size of glitch rects
-      rect(x, y, pointSize, pointSize); // create glitch rects
+      rect(x, y, pointSize, pointSize); // create glitch rectangles
 
     }
   }
   renderCounter = renderCounter + 1;
-  if(renderCounter > 50) { //10, 40, 50
+  if(renderCounter > 50) { //experimented with values: 10, 40 and 50
     console.log("Done!")
     noLoop();
     // uncomment this to save the result
