@@ -4,9 +4,9 @@ let renderCounter=0;
 let star;
 
 // change these three lines as appropiate
-let sourceFile = "input_6.jpg";
-let maskFile   = "mask_6.png";
-let outputFile = "output_5.png";
+let sourceFile = "input_3.jpg";
+let maskFile   = "mask_3.png";
+let outputFile = "output_3.png";
 
 function preload() {
   sourceImg = loadImage(sourceFile);
@@ -36,14 +36,14 @@ function draw () {
     fill(pix);
     if(mask[0] > 128) {
       //let pointSize = 0;
-      image(star,x-5,y,0);
-      stroke(255,255,255);
+      image(star,x-5,y,0); // comment this to turn off stars
+      stroke(255,255,255); // rain line color.
       strokeWeight(.5);
-      line(x, y, x , y + 100);
+      line(x, y, x , y + 100); // rain lines.
     }
     else {
       noStroke();
-      let pointSize = 10;
+      let pointSize = 11;
       rect(x, y, pointSize, pointSize);
 
     }
@@ -53,7 +53,7 @@ function draw () {
     console.log("Done!")
     noLoop();
     // uncomment this to save the result
-    // saveArtworkImage(outputFile);
+    //saveArtworkImage(outputFile);
   }
 }
 
